@@ -11,10 +11,10 @@ public class Prime {
     private List<Integer> primes;
     private int count = 0;
     private int sumOfPrimes = 0;
-    private final int firstNumber = 0;
-    private final int lastNumber = 1000;
+//    private final int firstNumber = 0;
+//    private final int lastNumber = 1000;
 
-    public Prime() {
+    public Prime(int firstNumber, int lastNumber) {
         primes = new ArrayList<>();
         calculatePrimes(firstNumber, lastNumber);
     }
@@ -50,6 +50,13 @@ public class Prime {
 
     public List<Integer> getPrimes() {
         return primes;
+    }
+
+
+    // getCount() { return count; }
+    public int getSum() {
+        System.out.println(sumOfPrimes);
+        return sumOfPrimes;
     }
 
 //    public int printCount(){
