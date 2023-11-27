@@ -18,7 +18,7 @@ public class Prime {
     }
 
     private void validateInterval(int start, int end) {
-        if (start != 0 || end != 1000) {
+        if (start < 0 || end > 1000 || start > end) {
             throw new IllegalArgumentException("Hoppsan, fel inmatning!");
         }
     }

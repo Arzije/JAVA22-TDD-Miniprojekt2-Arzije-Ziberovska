@@ -54,14 +54,28 @@ class PrimeTest {
 
     @Test
     @DisplayName("Ensures that the sum of primes is accurate")
-    void sumOfPrimes() {
+    void sumOfAllPrimes() {
         assertEquals(76127, prime.getSum());
     }
 
     @Test
+    @DisplayName("Ensures that the sum of primes is accurate")
+    void sumOfSomePrimes() {
+        Prime prime100 = new Prime(0, 100);
+        assertEquals(1060, prime100.getSum());
+    }
+
+    @Test
     @DisplayName("Ensures that the prime counter is accurate")
-    void countOfPrimes() {
+    void countOfAllPrimes() {
         assertEquals(168, prime.getCount());
+    }
+
+    @Test
+    @DisplayName("Ensures that the prime counter is accurate")
+    void countOfSomePrimes() {
+        Prime prime10 = new Prime(5, 10);
+        assertEquals(2, prime10.getCount());
     }
 
     @Test
